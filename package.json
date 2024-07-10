@@ -1,0 +1,36 @@
+{
+  "name": "credits-generator",
+  "description": "Generates a list of open-source software within a repository, and a separate list for packages with undefined licenses.",
+  "version": "",
+  "license": "MIT",
+  "main": "cli.js",
+  "author": "benjypng",
+  "bin": {
+    "credits-generator": "cli.js"
+  },
+  "keywords": [
+    "sbom"
+  ],
+  "release": {
+    "branches": [
+      "main"
+    ],
+    "plugins": [
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator",
+      [
+        "@semantic-release/npm",
+        {
+          "npmPublish": true,
+          "tarballDir": "dist"
+        }
+      ],
+      [
+        "@semantic-release/github",
+        {
+          "assets": "dist/*.tgz"
+        }
+      ]
+    ]
+  }
+}

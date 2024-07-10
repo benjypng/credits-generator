@@ -1,0 +1,16 @@
+UNDEF PACKAGES LIST
+======================================================
+Name: frontend
+Group: undefined
+Version: 1.0.0
+BOM-Ref: frontend@1.0.0
+Author: undefined
+Licenses: No licenses found
+======================================================
+Name: frontend
+Group: undefined
+Version: 1.0.0
+BOM-Ref: frontend@1.0.0
+Author: undefined
+Licenses: No licenses found
+======================================================
