@@ -133,7 +133,7 @@ Licenses: ${dep.licenses ? dep.licenses.join(",") : "No licenses found"}`;
 
 // Option 2: This is a simple text file that can be opened in MS Word
 const generateUniqueLicenses = (uniqueLicenses) => {
-  let str = `<ul>`;
+  let str = ``;
 
   // Create map from JSON
   const licenseMap = {};
@@ -142,17 +142,23 @@ const generateUniqueLicenses = (uniqueLicenses) => {
   });
 
   uniqueLicenses.forEach((license) => {
-    str += `- ${license}`;
+    str += `- ${license}
+
+`;
   });
 
-  str += `================================================`;
+  str += `================================================
+
+`;
 
   uniqueLicenses.forEach((l) => {
     if (licenseMap[l]) {
       str += `${l}
 
 ${licenseMap[l]}
-================================================`;
+================================================
+
+`;
     } else {
       console.log(`License for ${l} not found`);
     }
