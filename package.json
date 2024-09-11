@@ -1,7 +1,7 @@
 {
   "name": "credits-generator",
   "description": "Generates a list of open-source software within a repository, and a separate list for packages with undefined licenses.",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "license": "MIT",
   "main": "cli.js",
   "author": "benjypng",
