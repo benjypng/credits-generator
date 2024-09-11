@@ -143,7 +143,6 @@ const generateUniqueLicenses = (uniqueLicenses) => {
 
   uniqueLicenses.forEach((license) => {
     str += `- ${license}
-
 `;
   });
 
@@ -156,6 +155,7 @@ const generateUniqueLicenses = (uniqueLicenses) => {
       str += `${l}
 
 ${licenseMap[l]}
+
 ================================================
 
 `;
@@ -188,7 +188,7 @@ const main = async () => {
     .filter((license) => license !== undefined);
   uniqueLicenses = [...new Set(uniqueLicenses)];
   const uniqueLicensesList = generateUniqueLicenses(uniqueLicenses);
-  fs.writeFileSync("unique-licenses.docx", uniqueLicensesList);
+  fs.writeFileSync("unique-licenses.txt", uniqueLicensesList, "utf8");
 
   console.log(
     `${generateTimestamp()} Generated list of unique licenses. Generating packages with undefined licenses...`,
